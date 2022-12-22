@@ -1,9 +1,12 @@
-
 // Create the modal element
 const modal = document.createElement('div');
 modal.classList.add('modal');
 modal.innerHTML = `
   <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">Modal Title</h2>
+      <button class="close-button">Close</button>
+    </div>
     <iframe src="https://lead.debitura.com/"></iframe>
   </div>
 `;
@@ -15,9 +18,10 @@ modal.style.zIndex = '1';
 modal.style.left = '0';
 modal.style.top = '0';
 modal.style.width = '100%';
-modal.style.height = '500px';
+modal.style.height = '80%';
 modal.style.overflow = 'auto';
 modal.style.backgroundColor = 'rgba(0,0,0,0.4)';
+
 // Center the modal using CSS
 modal.style.top = '50%';
 modal.style.left = '50%';
@@ -44,6 +48,22 @@ iframe.style.width = '100%';
 iframe.style.height = '500px';
 iframe.style.border = 'none';
 
+// Set the CSS styles for the close button
+const closeButton = modal.querySelector('.close-button');
+closeButton.style.position = 'absolute';
+closeButton.style.top = '0';
+closeButton.style.right = '0';
+closeButton.style.padding = '10px';
+closeButton.style.fontSize = '24px';
+closeButton.style.border = 'none';
+closeButton.style.backgroundColor = '#007bff';
+closeButton.style.color = '#fff';
+closeButton.style.borderRadius = '4%';
+closeButton.style.cursor = 'pointer';
+closeButton.addEventListener('click', () => {
+//   Open the modal
+  modal.style.display = 'none';
+});
 // Add the modal to the document
 document.body.appendChild(modal);
 
@@ -60,10 +80,6 @@ window.addEventListener('click', (event) => {
 });
 const button = document.getElementById('open-modal-button');
 
-// button.addEventListener('click', () => {
-  // Open the modal
-//   modal.style.display = 'block';
-
   // Apply the button styles
   button.style.backgroundColor = 'blue';
   button.style.color = 'white';
@@ -72,3 +88,4 @@ const button = document.getElementById('open-modal-button');
   button.style.borderRadius = '4px';
   button.style.cursor = 'pointer';
 // });
+
