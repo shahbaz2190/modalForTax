@@ -4,7 +4,7 @@ modal.classList.add('modal');
 modal.innerHTML = `
   <div class="modal-content">
     <div class="modal-header">
-      <h2 class="modal-title">Modal Title</h2>
+      <h2 class="modal-title">Tax Information</h2>
       <button class="close-button">Close</button>
     </div>
     <iframe src="https://lead.debitura.com/"></iframe>
