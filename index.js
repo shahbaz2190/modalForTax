@@ -1,5 +1,4 @@
 
-
 // Create the modal element
 const modal = document.createElement('div');
 modal.classList.add('modal');
@@ -46,7 +45,7 @@ iframe.style.height = '500px';
 iframe.style.border = 'none';
 
 // Add the modal to the document
-document.getElementById("add_modal").appendChild(modal);
+document.body.appendChild(modal);
 
 // Create the method that opens the modal
 window.OpenMyModal = () => {
@@ -73,4 +72,3 @@ const button = document.getElementById('open-modal-button');
   button.style.borderRadius = '4px';
   button.style.cursor = 'pointer';
 // });
-
