@@ -46,7 +46,7 @@ iframe.style.height = '500px';
 iframe.style.border = 'none';
 
 // Add the modal to the document
-document.body.appendChild(modal);
+document.getElementById("add_modal").appendChild(modal);
 
 // Create the method that opens the modal
 window.OpenMyModal = () => {
